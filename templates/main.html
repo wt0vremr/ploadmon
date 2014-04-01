@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="uk-vertical-align uk-text-center" id="waiter">
+    <div class="uk-vertical-align-middle uk-container-center">
+            <span class="uk-text-large">Loading data... <i class="uk-icon-spin uk-icon-spinner"></i></span>
+        </div>
+    </div>
+
+    <div class="uk-grid" data-uk-grid-margin id="maingrid" hidden>
+
+        <div id="leftpanel" class="uk-width-large-2-10 uk-width-medium-1-1">
+
+            <div class="uk-width-1-1">
+                <div class="uk-panel uk-panel-box uk-margin-bottom">
+                    <h3 class="uk-panel-title"><i class="uk-icon-info-circle"></i> RAM usage</h3>
+
+                    <div id="memdognut" class="uk-width-9-10 uk-align-center"></div>
+                </div>
+            </div>
+            <div class="uk-width-1-1">
+                <div class="uk-panel uk-panel-box uk-margin-bottom">
+                    <h3 class="uk-panel-title"><i class="uk-icon-info-circle"></i> HDD usage</h3>
+
+                    <div id="hdddognut" class="uk-width-9-10 uk-align-center"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="bigcharts" class="uk-width-large-5-10 uk-width-medium-1-1">
+
+
+            <div class="uk-width-1-1">
+                <div class="uk-panel uk-panel-box uk-margin-bottom">
+                    <div class="uk-panel-badge uk-badge uk-badge-success">CPU</div>
+                    <h3 class="uk-panel-title"><i class="uk-icon-dashboard"></i> CPU cores load</h3>
+
+                    <div id="coresgraph" class="uk-width-1-1"></div>
+                </div>
+            </div>
+
+            <div class="uk-width-1-1">
+                <div class="uk-panel uk-panel-box">
+                    <div class="uk-panel-badge uk-badge uk-margin-bottom">RAM</div>
+                    <h3 class="uk-panel-title"><i class="uk-icon-bar-chart-o"></i> Memory load</h3>
+
+                    <div id="memgraph" class="uk-width-1-1"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="rightpanel" class="uk-width-large-3-10 uk-width-medium-1-1">
+
+            <div class="uk-panel uk-panel-box  uk-margin-bottom">
+                <h3 class="uk-panel-title"><i class="uk-icon-info-circle"></i> Server status</h3>
+                <table id="statstable" class="uk-table uk-table-hover uk-table-condensed">
+
+                </table>
+            </div>
+
+            <div class="uk-panel uk-panel-box">
+                <h3 class="uk-panel-title"><i class="uk-icon-bolt"></i> CPU info</h3>
+                <table id="statstable" class="uk-table uk-table-hover uk-table-condensed">
+                {% for i in cpu %}
+                        <tr>
+                            <td>{{ i[0] }}</td>
+                            <td>{{ i[1] }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+
+            <div class="uk-panel uk-panel-box">
+                <h3 class="uk-panel-title"><i class="uk-icon-linux"></i> OS info</h3>
+                <table id="statstable" class="uk-table uk-table-hover uk-table-condensed">
+                {% for i in os %}
+                        <tr>
+                            <td>{{ i[0] }}</td>
+                            <td>{{ i[1] }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+{% endblock %}

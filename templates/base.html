@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ploadmon 0.1</title>
+
+    <script src="/static/js/jquery-2.1.0.min.js"></script>
+    <script src="/static/js/raphael-min.js"></script>
+    <script src="/static/js/morris-0.4.3.min.js"></script>
+    <script src="/static/js/uikit.min.js"></script>
+    <script src="/static/js/ploadmon.js"></script>
+
+    <link rel="stylesheet" href="/static/css/uikit.gradient.min.css"/>
+    <link rel="stylesheet" href="/static/css/morris-0.4.3.min.css"/>
+
+    <meta charset="UTF-8">
+
+    <meta name="author" content="Dmitry Shaporenko">
+    <meta name="description" content="ploadmon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+</head>
+<body>
+
+<div class="uk-width-9-10 uk-align-center" id="main">
+
+    <div id="header" class=" uk-margin-top uk-margin-bottom uk-margin uk-align-center">
+        <span>
+        <span class="uk-text-bold uk-text-large">
+        ploadmon 0.1
+        <a class="uk-icon-github" href="http://google.com" data-uk-tooltip title="Visit ploadmon GitHub page"></a>
+        </span>
+        <br>
+        <span class="uk-hidden-large uk-text-muted">Mobile mode <i class="uk-icon-tablet"></i></span>
+        <span class="uk-hidden-medium uk-hidden-small uk-text-muted">Desktop mode <i class="uk-icon-desktop"></i></span>
+        </span>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+</div>
+<div id="footer" class="uk-width-1-1 uk-align-center uk-text-center">
+<div class="uk-display-inline-block uk-align-center uk-text-center">
+        <span class="uk-text-small uk-text-muted">© 2014 Dmitry Shaporenko</span>
+    </div>
+</div>
+
+
+</body>
+</html>
