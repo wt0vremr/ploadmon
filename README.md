@@ -1,5 +1,6 @@
 ##Ploadmon
-Here comes a system monitor **for linux hosts** which uses python, flask, uikit and morris.js. *BTW it's one of my PDP goals ;)*
+Here comes a system monitor **for linux hosts** which uses python, flask, uikit and morris.js.
+*BTW it's one of my PDP goals ;)*
 
 ###Features
 - Static host info - OS release & kernel, CPU model, total RAM and total HDD space.
